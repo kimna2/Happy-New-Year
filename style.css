@@ -162,73 +162,73 @@ body{
    MOBILE (phone & small tablet)
    ========================= */
 @media (max-width: 768px){
-  /* Title ở trên */
+
+  /* cho phép cuộn trang */
+  body{
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* bỏ absolute full-screen ở mobile để nội dung tự xuống dòng */
+  .wrap{
+    min-height: 100vh;
+  }
+
   .top-area{
-    top: 24px;
-    width: 100%;
-    padding: 0 14px;
+    position: sticky;   /* dính trên khi scroll */
+    top: 12px;
+    transform: none;    /* bỏ translate */
+    left: 0;
+    z-index: 5;
+    padding: 0 16px;
   }
 
-  .title{
-    font-size: 32px;
-    line-height: 1.15;
-    margin: 0;
-  }
-
-  .year{
-    font-size: 16px;
-    padding: 4px 10px;
-  }
-
-  /* Đẩy nội dung xuống dưới để không đè lên title */
   .center-area{
-    position: absolute;
-    inset: 0;
+    position: static !important;     /* bỏ absolute */
+    inset: auto !important;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;  /* không ép giữa nữa */
-    padding: 0 16px;
-    padding-top: 120px;          /* QUAN TRỌNG: chừa chỗ cho title */
-    text-align: center;
+    justify-content: flex-start;     /* xếp từ trên xuống */
+    padding: 18px 16px 28px;
+    gap: 18px;
+    margin-top: 20px;               /* cách title */
   }
 
-  /* Đoạn thư (giữ hết chữ) */
+  /* subtitle giữ nguyên, không khung, không scroll riêng */
   .subtitle{
     background: transparent !important;
     border: none !important;
-    border-radius: 0 !important;
     box-shadow: none !important;
     padding: 0 !important;
 
     max-height: none !important;
     overflow: visible !important;
-
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
+    font-size: 14px;
+    line-height: 1.55;
+    opacity: .9;
   }
 
-  /* Countdown 2x2 cho vừa màn hình */
+  /* countdown vẫn 2x2 */
   .countdown{
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     width: min(360px, 92vw);
+    margin-top: 6px;
   }
 
-  .cd-box{
-    padding: 12px 10px;
-  }
+  #fx{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.wrap, .top-area, .center-area{
+  position: relative;
+  z-index: 1;
+}
 
-  .cd-box span{
-    font-size: 26px;
-  }
-
-  .cd-box small{
-    font-size: 10px;
-    letter-spacing: .12em;
-  }
-
-  canvas#fx{
+canvas#fx{
     filter: blur(0.2px);
   }
 }
