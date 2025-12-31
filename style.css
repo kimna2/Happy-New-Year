@@ -162,52 +162,65 @@ body{
    MOBILE (phone & small tablet)
    ========================= */
 @media (max-width: 768px){
+  /* Title ở trên */
   .top-area{
-    top: 28px;
+    top: 24px;
+    width: 100%;
+    padding: 0 14px;
   }
 
   .title{
     font-size: 32px;
-    line-height: 1.1;
+    line-height: 1.15;
+    margin: 0;
   }
+
   .year{
     font-size: 16px;
     padding: 4px 10px;
   }
 
-  /* Chừa khoảng trống cho title để không bị đè */
+  /* Đẩy nội dung xuống dưới để không đè lên title */
   .center-area{
-    padding: 16px;
-    padding-top: 140px;   /* quan trọng */
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* không ép giữa nữa */
+    padding: 0 16px;
+    padding-top: 120px;          /* QUAN TRỌNG: chừa chỗ cho title */
+    text-align: center;
   }
 
-  /* Đoạn thư */
+  /* Đoạn thư (giữ hết chữ) */
   .subtitle{
     font-size: 13px;
-    line-height: 1.45;
-    opacity: .9;
-
-    max-height: 160px;    /* giới hạn chiều cao */
-    overflow-y: auto;     /* scroll */
-    padding: 12px 14px;
-    margin: 0 auto 16px;
-
-    background: rgba(255,255,255,.10);
-    border: 1px solid rgba(255,255,255,.18);
-    border-radius: 16px;
-
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    line-height: 1.5;
+    margin: 0 0 18px;
+    max-width: 92vw;
+    word-break: keep-all;
   }
 
-  /* Countdown 2x2 */
+  /* Countdown 2x2 cho vừa màn hình */
   .countdown{
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    width: min(360px, 92vw);
   }
 
-  .cd-box span{ font-size: 26px; }
-  .cd-box small{ font-size: 10px; letter-spacing: .12em; }
+  .cd-box{
+    padding: 12px 10px;
+  }
+
+  .cd-box span{
+    font-size: 26px;
+  }
+
+  .cd-box small{
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
 
   canvas#fx{
     filter: blur(0.2px);
