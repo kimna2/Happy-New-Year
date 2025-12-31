@@ -157,3 +157,75 @@ body{
     top: 50px;
   }
 }
+
+/* =========================
+   MOBILE (phone & small tablet)
+   ========================= */
+@media (max-width: 768px){
+
+  /* Title phía trên */
+  .top-area{
+    top: 40px;              /* kéo title lên cao hơn */
+  }
+
+  .title{
+    font-size: 34px;        /* nhỏ hơn cho điện thoại */
+    line-height: 1.15;
+  }
+
+  .year{
+    font-size: 18px;
+    padding: 4px 10px;
+  }
+
+  /* Subtitle + countdown ở giữa */
+  .center-area{
+    padding: 16px;
+  }
+
+  .subtitle{
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  /* Countdown chuyển sang 2 cột */
+  .countdown{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .cd-box{
+    padding: 12px 10px;
+  }
+
+  .cd-box span{
+    font-size: 26px;
+  }
+
+  .cd-box small{
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+
+  canvas#fx{
+    filter: blur(0.2px);
+  }
+}
+
+/* =========================
+   EXTRA MOBILE (very small phones)
+   ========================= */
+   @media (max-width: 420px){
+
+  .title{
+    font-size: 28px;
+  }
+
+  .subtitle{
+    font-size: 13px;
+  }
+
+  .cd-box span{
+    font-size: 22px;
+  }
+}
