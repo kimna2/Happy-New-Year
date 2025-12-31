@@ -195,11 +195,17 @@ body{
 
   /* Đoạn thư (giữ hết chữ) */
   .subtitle{
-    font-size: 13px;
-    line-height: 1.5;
-    margin: 0 0 18px;
-    max-width: 92vw;
-    word-break: keep-all;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+
+    max-height: none !important;
+    overflow: visible !important;
+
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
   }
 
   /* Countdown 2x2 cho vừa màn hình */
@@ -233,14 +239,14 @@ body{
    @media (max-width: 420px){
 
   .title{
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .subtitle{
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .cd-box span{
-    font-size: 20px;
+    font-size: 22px;
   }
 }
