@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy New Year </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Canvas fireworks/confetti -->
+  <canvas id="fx"></canvas>
+
+  <main class="wrap">
+    
+    <!-- TITLE PHÍA TRÊN -->
+    <div class="top-area">
+        <h1 class="title">
+          Happy New Year
+        <span class="year" id="yearText">2026</span>
+        </h1>
+    </div>
+
+    <!-- NỘI DUNG Ở GIỮA -->
+    <div class="center-area">
+        <p class="subtitle">
+         Dear my beloved sister,
+         <br>There are only a few minutes left before the New Year begins in Canada, 
+         <br>even though I already welcomed the New Year earlier here in Korea.
+         <br>In 2026, you are turning 26. Perhaps 2025 was not a very lucky year for you, 
+         <br>so I sincerely hope that 2026 will bring you many positive changes, peace, and good fortune.
+         <br>It’s truly a pity that I can’t celebrate the New Year with you this year. 
+         <br>Still, I feel grateful knowing that you have someone special to share this meaningful moment with. 
+         <br>I hope you have a warm, happy, and joyful New Year’s Eve with your husband.
+         <br>I miss you so much.
+         <br>From, your little sister
+        </p>
+
+    <section class="countdown">
+      <div class="cd-box"><span id="d">00</span><small>Days</small></div>
+      <div class="cd-box"><span id="h">00</span><small>Hours</small></div>
+      <div class="cd-box"><span id="m">00</span><small>Minutes</small></div>
+      <div class="cd-box"><span id="s">00</span><small>Seconds</small></div>
+    </section>
+    </div>
+    
+    <!-- music -->
+    <audio id="bgm" preload="auto" loop>
+       <source src="music/Happy New Year.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- overlay unlock -->
+    <div id="audioUnlock"></div>
+
+
+  </main>
+
+  
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
